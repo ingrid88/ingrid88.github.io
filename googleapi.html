@@ -1,0 +1,66 @@
+<html>
+  <head>
+    <script>
+      function appendResults(text) {
+        var results = document.getElementById('results');
+        results.appendChild(document.createElement('P'));
+        results.appendChild(document.createTextNode(text));
+      }
+
+      function makeRequest() {
+        var request = gapi.client.urlshortener.url.get({
+          'shortUrl': 'http://goo.gl/fbsS'
+        });
+        request.then(function(response) {
+          appendResults(response.result.longUrl);
+        }, function(reason) {
+          console.log('Error: ' + reason.result.error.message);
+        });
+      }
+
+      function appendPre(message) {
+        var pre = document.getElementById('output');
+        var textContent = document.createTextNode(message + '\n');
+        pre.appendChild(textContent);
+      }
+
+      function makeSheetRequest() {
+        gapi.client.sheets.spreadsheets.values.get({
+          spreadsheetId: '10oCrCM82wLb-Cv7WiEq3ulUINdfQBHWt06W-ILu4tNw',
+          // spreadsheetId: '1BxiMVs0XRA5nFMdKvBdBZjgmUUqptlbs74OgvE2upms',
+          // spreadsheetId: '10oCrCM82wLb-Cv7WiEq3ulUINdfQBHWt06W-ILu4tNw',
+          range: 'Sheet1!A2:C',
+        }).then(function(response) {
+          var range = response.result;
+          if (range.values.length > 0) {
+            appendPre('What I learned Today:');
+            for (i = 0; i < range.values.length; i++) {
+              var row = range.values[i];
+              // Print columns A and E, which correspond to indices 0 and 4.
+              appendPre("- "+row[0]+","+row[1]+","+row[2]);
+            }
+          } else {
+            appendPre('No data found.');
+          }
+        }, function(response) {
+          appendPre('Error: ' + response.result.error.message);
+        });
+      }
+
+      function init() {
+        var discoveryUrl =
+            'https://sheets.googleapis.com/$discovery/rest?version=v4';
+        gapi.client.setApiKey('AIzaSyA3--BafkreXYUuknT7xyQJXcvsg_9bjlM');
+        gapi.client.load(discoveryUrl).then(makeSheetRequest);
+        // gapi.client.load('urlshortener', 'v1').then(makeRequest);
+      }
+
+
+    </script>
+    <script src="https://apis.google.com/js/client.js?onload=init"></script>
+  </head>
+  <body>
+    <div id="results"></div>
+    hello
+  </body>
+</html>
