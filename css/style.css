@@ -1994,7 +1994,13 @@ thead th.first { padding-left: 0 !important; }
 #counter-wedding .counter-box { display: block; width: 130px; text-align: center; display:inline-block}
 #counter-wedding .number { font-size: 45px; text-align:center; font-weight: 100; line-height: 50px; color:#000;}
 #counter-wedding span {font-size: 12px; text-align: center; font-weight: 400; text-transform: uppercase; letter-spacing:1px;}
-.about-couple {border:8px; padding:15px;}
+.paired {
+  display: flex; /* equal height of the children */
+}
+.about-couple {
+  flex: 1;
+  border:8px;
+  padding:15px;}
 .about-couple-sub { padding:10% 7%;}
 .about-couple-sub img {max-width:38%;}
 .about-couple-sub i {margin:20px 20px 0 20px; color:#000; font-size:18px !important;}
