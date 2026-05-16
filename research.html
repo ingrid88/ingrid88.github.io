@@ -1,60 +1,213 @@
-<html >
+<!DOCTYPE html>
+<html lang="en">
 <head>
-    <title>Data Science-ing</title>
-    <meta name="keywords" content="">
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Research - Ingrid Spielman</title>
+    <link rel="icon" href="images/favicon.png" type="image/png">
+    <style>
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
 
-    <link rel="stylesheet" href="css/bootstrap.css" />
-    <link rel="stylesheet" href="css/et-line-icons.css" />
-    <link rel="stylesheet" href="css/font-awesome.min.css" />
-    <link rel="stylesheet" href="css/settings.css" />
-    <link rel="stylesheet" href="css/text-effect.css" />
-    <link rel="stylesheet" href="css/style.css" />
-    <link rel="stylesheet" href="css/responsive.css" />
+        :root {
+            --color-bg: #fafafa;
+            --color-text: #2d2d2d;
+            --color-muted: #666;
+            --color-accent: #c85a7c;
+            --color-accent-hover: #a94466;
+            --color-card-bg: #ffffff;
+            --color-border: #e8e8e8;
+            --font-main: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            --max-width: 900px;
+            --spacing: 2rem;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: var(--font-main);
+            color: var(--color-text);
+            background: var(--color-bg);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        a {
+            color: var(--color-accent);
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        a:hover {
+            color: var(--color-accent-hover);
+        }
+
+        nav {
+            position: sticky;
+            top: 0;
+            background: var(--color-bg);
+            border-bottom: 1px solid var(--color-border);
+            z-index: 100;
+            padding: 1rem var(--spacing);
+        }
+
+        nav .nav-inner {
+            max-width: var(--max-width);
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        nav .nav-name {
+            font-weight: 700;
+            font-size: 1.1rem;
+            color: var(--color-text);
+        }
+
+        nav .nav-name a {
+            color: var(--color-text);
+        }
+
+        nav .nav-links {
+            display: flex;
+            gap: 1.5rem;
+            list-style: none;
+        }
+
+        nav .nav-links a {
+            color: var(--color-muted);
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
+
+        nav .nav-links a:hover {
+            color: var(--color-accent);
+        }
+
+        main {
+            max-width: var(--max-width);
+            margin: 0 auto;
+            padding: 3rem var(--spacing);
+        }
+
+        h1 {
+            font-size: 1.4rem;
+            font-weight: 700;
+            margin-bottom: 2rem;
+            color: var(--color-accent);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            font-size: 0.9rem;
+        }
+
+        .research-item {
+            background: var(--color-card-bg);
+            border: 1px solid var(--color-border);
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .research-item h2 {
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+
+        .research-item p {
+            color: var(--color-muted);
+            font-size: 0.9rem;
+            margin-bottom: 0.75rem;
+        }
+
+        .research-item img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 4px;
+            margin-bottom: 0.75rem;
+        }
+
+        .research-item .links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            font-size: 0.85rem;
+        }
+
+        footer {
+            border-top: 1px solid var(--color-border);
+            padding: 2rem var(--spacing);
+            text-align: center;
+            color: var(--color-muted);
+            font-size: 0.85rem;
+        }
+    </style>
 </head>
-<body bgcolor="#FFFFFF">
-  <div class="container">
-    <section id="collagen" class="fix-background xs-onepage-section bg-gray">
-      <span class="title-small text-uppercase letter-spacing-3 font-weight-600 black-text display-block">
-        <div class="col-md-5 col-md-offset-2">
-          <p>Collagen Peptides Design and Melting Points given by CD curve Derivative<p>
-          <img src="./images/research/udel.gif">
+<body>
+    <nav>
+        <div class="nav-inner">
+            <span class="nav-name"><a href="index.html">Ingrid Spielman</a></span>
+            <ul class="nav-links">
+                <li><a href="index.html#about">About</a></li>
+                <li><a href="index.html#projects">Projects</a></li>
+                <li><a href="index.html#writing">Writing</a></li>
+                <li><a href="index.html#research">Research</a></li>
+            </ul>
         </div>
-      </span>
-    </section>
-    <section id="NP" class="fix-background xs-onepage-section bg-gray">
-      <span class="title-small text-uppercase letter-spacing-3 font-weight-600 black-text display-block">
-        <div class="col-md-5 col-md-offset-2">
-          <p>Oxidative Stress of Nanoparticles on Cells<p>
-          <img src="./images/research/oxidative-stress.gif">
+    </nav>
+
+    <main>
+        <h1>Research</h1>
+
+        <div id="collagen" class="research-item">
+            <h2>Collagen Mimetic Peptides</h2>
+            <p>Design and melting points given by CD curve derivative. University of Delaware.</p>
+            <img src="./images/research/udel.gif" alt="Collagen peptide melting point curves">
         </div>
-      </span>
-    </section>
-    <section id="igem" class="fix-background xs-onepage-section bg-gray">
-      <span class="title-small text-uppercase letter-spacing-3 font-weight-600 black-text display-block">
-        <div class="col-md-5 col-md-offset-2">
-          <p>iGEM competition 2008<p>
-          <img src="./images/research/yeast-sex.gif">
-          <ul>
-            <li>
-              <a href="http://2008.igem.org/Team:Johns_Hopkins">website</a>
-            </li>
-            <li>
-              <a href="./images/research/iGEMposter.pdf">Poster</a>
-            </li>
-          </ul>
+
+        <div id="columbia" class="research-item">
+            <h2>Cell Edge Velocity Tracking</h2>
+            <p>Cells spreading on fibronectin-coated glass. Columbia University.</p>
+            <img src="./images/research/columbia.gif" alt="Cell edge velocity tracking">
         </div>
-      </span>
-    </section>
-    <section id="columbia" class="fix-background xs-onepage-section bg-gray">
-      <span class="title-small text-uppercase letter-spacing-3 font-weight-600 black-text display-block">
-        <div class="col-md-5 col-md-offset-2">
-          <p>Cells Spreading on Fibronectin coated glass<p>
-          <img src="./images/research/columbia.gif">
+
+        <div id="igem" class="research-item">
+            <h2>Yeast Sex Detector &mdash; iGEM 2008</h2>
+            <p>Synthetic biology competition at Johns Hopkins University.</p>
+            <img src="./images/research/yeast-sex.gif" alt="Yeast sex detector project">
+            <div class="links">
+                <a href="http://2008.igem.org/Team:Johns_Hopkins">iGEM 2008 Website</a>
+                <a href="http://2009.igem.org/Team:Johns_Hopkins-BAG">iGEM 2009 Website</a>
+                <a href="./images/research/iGEMposter.pdf">Poster (PDF)</a>
+            </div>
         </div>
-      </span>
-    </section>
-  </div>
+
+        <div id="NP" class="research-item">
+            <h2>Oxidative Stress of Nanoparticles on Cells</h2>
+            <p>Investigating the effects of nanoparticles on cellular oxidative stress.</p>
+            <img src="./images/research/oxidative-stress.gif" alt="Oxidative stress visualization">
+        </div>
+
+        <div class="research-item">
+            <h2>Neisseria Fluorescent Reporters</h2>
+            <p>Bacterial imaging and tracking using fluorescent reporters.</p>
+            <div class="links">
+                <a href="./images/research/ASM2014poster.pdf">ASM 2014 Poster (PDF)</a>
+                <a href="https://github.com/ingrid88/MatlabTrackingImageJGUI">Tracking Software (GitHub)</a>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        &copy; Ingrid Spielman
+    </footer>
 </body>
 </html>
