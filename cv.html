@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV — Ingrid Spielman</title>
+    <link rel="icon" href="images/favicon.png" type="image/png">
+    <style>
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        :root {
+            --color-bg: #fafafa;
+            --color-text: #2d2d2d;
+            --color-muted: #666;
+            --color-accent: #c85a7c;
+            --color-accent-hover: #a94466;
+            --color-border: #e8e8e8;
+            --font-main: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            --max-width: 900px;
+            --spacing: 2rem;
+        }
+
+        body {
+            font-family: var(--font-main);
+            color: var(--color-text);
+            background: var(--color-bg);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        a {
+            color: var(--color-accent);
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        a:hover {
+            color: var(--color-accent-hover);
+        }
+
+        nav {
+            position: sticky;
+            top: 0;
+            background: var(--color-bg);
+            border-bottom: 1px solid var(--color-border);
+            z-index: 100;
+            padding: 1rem var(--spacing);
+        }
+
+        nav .nav-inner {
+            max-width: var(--max-width);
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        nav .nav-name {
+            font-weight: 700;
+            font-size: 1.1rem;
+            color: var(--color-text);
+        }
+
+        nav .nav-links {
+            display: flex;
+            gap: 1.5rem;
+            list-style: none;
+        }
+
+        nav .nav-links a {
+            color: var(--color-muted);
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
+
+        nav .nav-links a:hover {
+            color: var(--color-accent);
+        }
+
+        @media (max-width: 600px) {
+            nav .nav-inner {
+                flex-direction: column;
+                gap: 0.5rem;
+            }
+
+            nav .nav-links {
+                gap: 1rem;
+            }
+        }
+
+        .cv-container {
+            max-width: var(--max-width);
+            margin: 0 auto;
+            padding: 3rem var(--spacing);
+        }
+
+        .cv-header {
+            margin-bottom: 3rem;
+        }
+
+        .cv-header h1 {
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 0.25rem;
+        }
+
+        .cv-header .tagline {
+            font-size: 1.05rem;
+            color: var(--color-muted);
+        }
+
+        .cv-section {
+            margin-bottom: 2.5rem;
+        }
+
+        .cv-section h2 {
+            font-size: 0.9rem;
+            font-weight: 700;
+            color: var(--color-accent);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-bottom: 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 1px solid var(--color-border);
+        }
+
+        .cv-entry {
+            margin-bottom: 1.75rem;
+        }
+
+        .cv-entry:last-child {
+            margin-bottom: 0;
+        }
+
+        .cv-entry-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            flex-wrap: wrap;
+            gap: 0.25rem 1rem;
+        }
+
+        .cv-entry-header h3 {
+            font-size: 1rem;
+            font-weight: 600;
+        }
+
+        .cv-entry-header .dates {
+            font-size: 0.85rem;
+            color: var(--color-muted);
+            white-space: nowrap;
+        }
+
+        .cv-entry .location {
+            font-size: 0.85rem;
+            color: var(--color-muted);
+            margin-bottom: 0.4rem;
+        }
+
+        .cv-entry ul {
+            list-style: disc;
+            padding-left: 1.25rem;
+            margin-top: 0.4rem;
+        }
+
+        .cv-entry li {
+            font-size: 0.9rem;
+            margin-bottom: 0.3rem;
+            line-height: 1.5;
+        }
+
+        .education-entry {
+            margin-bottom: 0.5rem;
+        }
+
+        .education-entry h3 {
+            font-size: 0.95rem;
+            font-weight: 600;
+        }
+
+        .education-entry p {
+            font-size: 0.85rem;
+            color: var(--color-muted);
+        }
+
+        .skills-list {
+            list-style: none;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+
+        .skills-list li {
+            font-size: 0.85rem;
+            background: #fff;
+            border: 1px solid var(--color-border);
+            border-radius: 4px;
+            padding: 0.25rem 0.6rem;
+            color: var(--color-muted);
+        }
+
+        footer {
+            border-top: 1px solid var(--color-border);
+            padding: 2rem var(--spacing);
+            text-align: center;
+            color: var(--color-muted);
+            font-size: 0.85rem;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="nav-inner">
+            <a class="nav-name" href="index.html">Ingrid Spielman</a>
+            <ul class="nav-links">
+                <li><a href="index.html#about">About</a></li>
+                <li><a href="index.html#projects">Projects</a></li>
+                <li><a href="index.html#writing">Writing</a></li>
+                <li><a href="index.html#research">Research</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="cv-container">
+        <div class="cv-header">
+            <h1>Curriculum Vitae</h1>
+            <p class="tagline">Lead Data Analyst &mdash; Experimentation, Personalization, Data Science</p>
+        </div>
+
+        <section class="cv-section">
+            <h2>Experience</h2>
+
+            <div class="cv-entry">
+                <div class="cv-entry-header">
+                    <h3>Lead Analyst, Experimentation &mdash; Disney</h3>
+                    <span class="dates">2020 &ndash; Present</span>
+                </div>
+                <p class="location">Remote</p>
+                <ul>
+                    <li>Designed and analyzed 20+ A/B experiments across homepage, search, and content recommendation surfaces for a global streaming platform</li>
+                    <li>Led a research initiative investigating how non-promoted content gets discovered by personalization algorithms, delivering actionable recommendations to cross-functional stakeholders</li>
+                    <li>Developed novel experimentation metrics (engagement intent, content novelty, vertical positioning) and made them self-serve for partner teams</li>
+                    <li>Built an experimentation capacity planning tool providing automated insight into test slating and resource allocation</li>
+                    <li>Prototyped AI-powered experiment automation tooling integrating LLMs with internal data infrastructure to standardize and accelerate analysis workflows</li>
+                    <li>Identified that broader personalization of content surfacing improved engagement across all user segments, not just power users</li>
+                    <li>Led team of 3 building ETLs, scripts, and systems for data quality and governance tooling</li>
+                    <li>Engineered automated data quality monitoring with SLA metrics and dashboards</li>
+                </ul>
+            </div>
+
+            <div class="cv-entry">
+                <div class="cv-entry-header">
+                    <h3>Statistical Analyst &mdash; Dia&amp;Co</h3>
+                    <span class="dates">2017 &ndash; 2019</span>
+                </div>
+                <p class="location">New York, NY</p>
+                <ul>
+                    <li>Built mixed-effects and hierarchical Bayesian models for pricing optimization and product elasticity estimation</li>
+                    <li>Developed a predictive replenishment algorithm that reduced inventory out-of-stock periods</li>
+                    <li>Authored data pipelines to compute and monitor KPIs and inventory state changes</li>
+                </ul>
+            </div>
+
+            <div class="cv-entry">
+                <div class="cv-entry-header">
+                    <h3>Data Analyst &mdash; Flocabulary</h3>
+                    <span class="dates">2016 &ndash; 2017</span>
+                </div>
+                <p class="location">New York, NY</p>
+                <ul>
+                    <li>Productionized logistic regression and random forest models to predict conversion rates and prioritize leads</li>
+                    <li>Built deduplication pipeline with SQL and fuzzy matching, halving dataset size</li>
+                </ul>
+            </div>
+
+            <div class="cv-entry">
+                <div class="cv-entry-header">
+                    <h3>Research Associate &mdash; NYU Tandon School of Engineering</h3>
+                    <span class="dates">2016 &ndash; 2017</span>
+                </div>
+                <p class="location">New York, NY</p>
+                <ul>
+                    <li>Built an iOS and Node.js data collection mobile app for a public health research project</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="cv-section">
+            <h2>Education</h2>
+            <div class="education-entry">
+                <h3>University of Delaware</h3>
+                <p>MMSE, Materials Science and Engineering &mdash; 2012</p>
+            </div>
+            <div class="education-entry">
+                <h3>The Johns Hopkins University</h3>
+                <p>BS, Materials Science and Engineering &mdash; 2010</p>
+            </div>
+        </section>
+
+        <section class="cv-section">
+            <h2>Skills</h2>
+            <ul class="skills-list">
+                <li>Python</li>
+                <li>SQL</li>
+                <li>PySpark</li>
+                <li>Databricks</li>
+                <li>Snowflake</li>
+                <li>R</li>
+                <li>Statistics</li>
+                <li>A/B Testing</li>
+                <li>Machine Learning</li>
+                <li>Pandas</li>
+                <li>Scikit-learn</li>
+                <li>AWS</li>
+                <li>Docker</li>
+                <li>Git</li>
+                <li>Looker</li>
+                <li>JavaScript</li>
+                <li>Node.js</li>
+                <li>Flask</li>
+            </ul>
+        </section>
+
+        <section class="cv-section">
+            <h2>Events &amp; Community</h2>
+            <ul style="list-style: disc; padding-left: 1.25rem;">
+                <li style="font-size: 0.9rem; margin-bottom: 0.3rem;">Contributor, Scikit-learn Open Source Sprint (2019)</li>
+                <li style="font-size: 0.9rem; margin-bottom: 0.3rem;">DS4A: Women Summit, Correlation One (2019)</li>
+                <li style="font-size: 0.9rem; margin-bottom: 0.3rem;">Pandemic Response Hackathon &mdash; Team Frontline Covid Backtracer (2020)</li>
+                <li style="font-size: 0.9rem; margin-bottom: 0.3rem;">NYC Startup Weekend &mdash; Blogger, Organizer, Advisor (2015&ndash;2016)</li>
+                <li style="font-size: 0.9rem; margin-bottom: 0.3rem;">Art Grant Recipient and Puppet Show Production (2024)</li>
+                <li style="font-size: 0.9rem; margin-bottom: 0.3rem;">Exhibited at Student Showcase Art Exhibit, Oolite (2024)</li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        &copy; Ingrid Spielman
+    </footer>
+</body>
+</html>
