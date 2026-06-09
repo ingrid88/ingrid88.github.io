@@ -3,14 +3,40 @@
 <head><meta charset="utf-8"><title>WordKeeper - Privacy Policy</title></head>
 <body>
   <h1>WordKeeper Privacy Policy</h1>
-  <p>Last updated: May 16, 2026</p>
-  <h2>What data we collect</h2>
-  <p>WordKeeper stores the words you save and the URLs of pages where you saved them. This data is stored locally in your browser using Chrome's storage sync API.</p>
-  <h2>Gmail access</h2>
-  <p>WordKeeper requests permission to send email via your Gmail account solely to email your saved word list to yourself. We do not read, store, or share your emails.</p>
-  <h2>Data sharing</h2>
-  <p>WordKeeper does not send your data to any external servers. All data stays in your browser and your Gmail account.</p>
+  <p>Last updated: June 9, 2026</p>
+
+  <h2>Overview</h2>
+  <p>WordKeeper is a Chrome extension that lets you save words while browsing and optionally email your saved word list to yourself via Gmail. This policy describes how WordKeeper interacts with your data, including Google user data.</p>
+
+  <h2>Google User Data Accessed</h2>
+  <p>WordKeeper requests the following Google API scope:</p>
+  <ul>
+    <li><strong>gmail.send</strong> — Permission to send emails on your behalf via the Gmail API.</li>
+  </ul>
+  <p>This is the only Google user data WordKeeper accesses. WordKeeper does not read, modify, delete, or otherwise access your Gmail inbox, contacts, drafts, labels, or any other Google account data.</p>
+
+  <h2>How Google User Data Is Used</h2>
+  <p>The <code>gmail.send</code> permission is used for one purpose only: when you click the "Email" button in the extension popup, WordKeeper sends your saved word list to the email address you have configured. The email is sent directly from your Gmail account to the recipient you specify. No other use is made of this permission.</p>
+
+  <h2>Data Sharing</h2>
+  <p>WordKeeper does not share any Google user data with third parties. Specifically:</p>
+  <ul>
+    <li>No data is sent to any external server, analytics service, or third-party API.</li>
+    <li>No data is sold, rented, or disclosed to any third party.</li>
+    <li>No data is used for advertising, profiling, or any purpose unrelated to the extension's core functionality.</li>
+    <li>No data is used to train artificial intelligence or machine learning models.</li>
+  </ul>
+  <p>The only network requests WordKeeper makes are: (1) to the Gmail API to send your email, and (2) to the Free Dictionary API to fetch word definitions. Neither request transmits your Google user data.</p>
+
+  <h2>Data Storage and Protection</h2>
+  <p>WordKeeper stores your saved words, their source URLs, and your configured email address locally in your browser using Chrome's built-in storage APIs (<code>chrome.storage.sync</code>). This data is protected by Chrome's security model and your Google account (if sync is enabled).</p>
+  <p>WordKeeper does not maintain any external database, server, or backend. No Google user data is stored outside your browser. OAuth access tokens are managed entirely by Chrome's <code>chrome.identity</code> API and are never written to disk or transmitted to any server controlled by WordKeeper.</p>
+
+  <h2>Data Retention and Deletion</h2>
+  <p>Your saved words remain in Chrome's local storage until you delete them. You can delete individual words or clear your entire list at any time using the extension popup. Uninstalling the extension removes all stored data.</p>
+  <p>To revoke WordKeeper's access to your Gmail account, visit your <a href="https://myaccount.google.com/permissions">Google Account Permissions</a> page and remove WordKeeper. This immediately revokes the extension's ability to send email on your behalf.</p>
+
   <h2>Contact</h2>
-  <p>Questions? Contact us at ingspi@gmail.com</p>
+  <p>If you have questions about this privacy policy or wish to request deletion of your data, contact us at ingspi@gmail.com.</p>
 </body>
 </html>
